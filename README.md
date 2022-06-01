@@ -1,2 +1,2 @@
 # discarbon-website-main
-Main website for the discarbon tools
+Main website for the disCarbon tools
