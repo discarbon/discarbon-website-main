@@ -1,128 +1,229 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
+<html lang="en">
 
-    <title>disCarbon - carbon offset tools</title>
-    <link rel="icon" type="image/svg+xml" href="./images/CO2_logo.png" />
+<head>
+  <title>disCarbon</title>
+  <link rel="icon" type="image/svg+xml" href="./images/CO2_logo.png" />
 
-    <link rel="stylesheet" href="dist/reset.css" />
-    <link rel="stylesheet" href="dist/reveal.css" />
-    <link rel="stylesheet" href="dist/theme/black.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <!-- Theme used for syntax highlighted code -->
-    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
-  </head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <body>
-    <div class="reveal">
-      <div class="slides">
-        <style>
-          .reveal .title-custom {
-            text-transform: none;
-            text-align: left;
-          }
-          .reveal .footer {
-            position: absolute;
-            bottom: 0.25em;
-            left: 0%;
-            font-size: 2rem;
-            z-index: 10;
-          }
-          .reveal p {
-            text-align: left;
-          }
-          .glow-bad {
-            text-shadow: 0 0 10px #ff0800;
-          }
-          .glow-good {
-            text-shadow: 0 0 10px #69eb12;
-          }
-          .grid-container {
-            display: grid;
-            grid-template-areas: "header header";
-            grid-template-columns: auto auto;
-            padding: 10px;
-          }
-          .grid-item {
-            /* background-color: rgba(255, 255, 255, 0.8); */
-            /* border: 10px solid rgba(0, 0, 0, 0.8); */
-            padding: 20px;
-            text-align: left;
-          }
-          div button {
-            background-color: #2f8f46;
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 40px;
-            margin: 4px 2px;
-            cursor: pointer;
-            border-radius: 50px;
-            font-weight: bold;
-          }
-        </style>
+  <meta name="description" content="Offset devcon 6 using on-chain nature-based carbon credits" />
+  <meta name="author" content="disCarbon" />
+  <meta property="og:title" content="disCarbon's devcon offsetter" />
+  <meta property="og:description"
+    content="Offset air travel emissions and devcon 6 using on-chain nature-based carbon credits" />
+  <meta property="og:image" name="image"
+    content="https://flight.discarbon.earth/images/disCarbonFlightPreviewImage.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="disCarbon's Devcon 6 offsetter" />
+  <meta name="twitter:description"
+    content="Offset air travel and event emissions using on-chain nature-based carbon credits" />
+  <meta name="twitter:site" content="@discarbon_earth" />
+  <meta name="twitter:creator" content="@discarbon_earth" />
+  <meta name="twitter:image:src" content="https://flight.discarbon.earth/images/disCarbonFlightPreviewImage.jpg" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
 
-        <div class="footer">
-          <small>
-            <img
-              style="vertical-align: middle"
-              src="./images/CO2_logo.png"
-              alt="disCarbon logo"
-              width="40"
-            />disCarbon &#169; 2022 </small>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+  <link href="/css/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+  <link href="/css/additional.css" rel="stylesheet">
+</head>
 
-
-        </div>
-
-        <section data-background-image="./images/nasa-E7q00J_8N7A-unsplash.jpg">
-          <h1 class="title-custom">disCarbon</h1>
-          <h2 class="title-custom">transparent & verifiable on-chain carbon retirement tools</h2>
-
-          <div style="margin-top: 2cm; margin-bottom: 4cm">
-          <button onclick="window.location.href='https://flight.discarbon.earth';">
-            Flight Offsetter
-          </button>
-          <!-- <button onclick="window.location.href='https://alpha.discarbon.earth';">
-            Alpha Flight Offsetter
-          </button> -->
-          </div>
-
-          <p style="font-size: 1rem; text-align: right">
-            photo credit:
-            <a
-              href="https://unsplash.com/@nasa?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-              >NASA</a
-            >
-          </p>
-        </section>
-      </div>
+<body
+  class="flex flex-col justify-between bg-no-repeat bg-bottom bg-cover bg-RollingHills min-h-screen font-sans">
+  <div class="navbar bg-base-500">
+    <div class="flex-1">
+      <!-- <a class="btn btn-ghost text-green-700 normal-case md:text-xl" href="https://www.discarbon.earth">disCarbon</a>
+      <a class="btn btn-ghost text-green-700 normal-case md:text-xl" href="/faq.html">FAQ</a> -->
     </div>
 
-    <script src="dist/reveal.js"></script>
-    <script src="plugin/notes/notes.js"></script>
-    <script src="plugin/markdown/markdown.js"></script>
-    <script src="plugin/highlight/highlight.js"></script>
-    <script>
-      // More info about initialization & config:
-      // - https://revealjs.com/initialization/
-      // - https://revealjs.com/config/
-      Reveal.initialize({
-        hash: true,
+  </div>
 
-        // Learn about plugins: https://revealjs.com/plugins/
-        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
-      });
-    </script>
-  </body>
+
+  <div class="container my-5 px-6 mx-auto">
+    <section class="mb-32 text-gray-800 text-center ">
+      <h1 class="text-5xl font-bold mb-8">Devcon Offset</h1>
+      <div class="flex justify-center">
+        <div class="max-w-[1200px]">
+          <div class="flex flex-col w-full lg:flex-row">
+            <div class="form-control w-80 card rounded-box space-y-2 mb-8 lg:mb-0 lg:mr-8">
+              <h2 class="card-title">Configure Flight and Event</h2>
+              <div class="grid flex-grow rounded-box place-items-left space-y-2">
+                <div>
+                  <!-- <label class="label">
+                    <span class="label-text">From where are you flying to Bogota?</span>
+                  </label> -->
+                  <input name="start" type="text" id="start" placeholder="Departure Airport"
+                    class="input input-bordered input-primary max-w-xs w-full md:h-[60px] md:text-xl">
+                </div>
+                <!-- <div>
+                  <input id="destination" type="text" id="destination" placeholder="To"
+                    class="input input-bordered input-primary max-w-xs w-full md:h-[60px] md:text-xl" />
+                </div> -->
+                <div>
+                  <!-- <label class="label">
+                    <span class="label-text">Which class are you flying?</span>
+                  </label> -->
+                  <div class="flex flex-row w-full rounded-lg bg-transparent mt-1">
+                    <select id="flightclass"
+                      class="select select-bordered select-primary w-full max-w-xs font-normal md:h-[60px] md:text-xl">
+                      <option value="economy">Economy class</option>
+                      <option value="business">Business class</option>
+                      <option value="first">First class</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="stats stats-horizontal">
+                  <div class="stat">
+                    <div class="stat-title">Distance</div>
+                    <div class="stat-value text-xl" id="distance">0 km</div>
+                    <div class="stat-desc">One way</div>
+                  </div>
+
+                  <div class="stat">
+                    <div class="stat-title text-sm">Flight emission</div>
+                    <div class="stat-value align-middle">
+                      <div class="stat-value text-xl" id="flight-emission">0.00 tCO<sub>2</sub></div>
+                    </div>
+                    <div class="stat-desc"></div>
+                  </div>
+                </div>
+
+                <div class="stats stats-horizontal">
+                  <div class="stat">
+                    <div class="stat-title w-full">Devcon 6 Emission per person</div>
+                    <div class="stat-value align-middle w-full">
+                      <div class="stat-value text-2xl" id="event-emission">--.-- tCO<sub>2</sub></div>
+                    </div>
+                    <div class="stat-desc"></div> <!-- show nothing here -->
+                  </div>
+                </div>
+              </div>
+              <div class="mb-2 ">
+                <label class="label">
+                  <span class="label-text">For how many people do you want to offset?</span>
+                </label>
+                <div class="flex flex-row w-full h-12 rounded-xl relative bg-transparent mt-1 md:h-[54px] md:text-xl">
+                  <button data-action="decrement"
+                    class="btn-primary h-full w-20 md:w-24 rounded-l-md cursor-pointer outline-none">
+                    <span class="m-auto text-2xl">−</span>
+                  </button>
+                  <input type="text"
+                    class="input input-bordered input-primary rounded-none text-center w-full text-md flex items-center text-gray-700 h-12 md:h-[54px] md:text-xl"
+                    id="passengers" value="1 participant"></input>
+                  <button data-action="increment" class="btn-primary w-20 md:w-24 rounded-r-lg cursor-pointer">
+                    <span class="m-auto text-2xl">+</span>
+                  </button>
+                </div>
+              </div>
+              <!-- <div class="relative ">
+                  <label class="label cursor-pointer">
+                    <span class="label-text md:text-xl">Round Trip:</span>
+                    <input type="checkbox" id="roundtrip" checked="checked" class="checkbox checkbox-primary md:checkbox-lg" />
+                  </label>
+                </div> -->
+            </div>
+
+            <div
+              class="grid flex-grow form-control w-80 card rounded-box place-items-left space-y-2 mb-8 lg:mb-0 lg:mr-8">
+              <h2 class="card-title">Contribute to Offset Pool</h2>
+              <!-- <div class="flex flex-wrap justify-center">
+                <img src="./images/dummy-statistics.png" alt="detailed carbon emission" class="w-3/4">
+              </div> -->
+              <div class="flex justify-center">
+                <canvas id="EmissionChart" style="width:50%"></canvas>
+              </div>
+              <!-- <canvas id="EmissionChart" style="width:80%;max-width:70px"></canvas> -->
+
+              <div class="stats stats-vertical md:stats-vertical w-full">
+                <!-- <div class="stat">
+                  <div class="stat-title">Distance</div>
+                  <div class="stat-value text-3xl" id="distance">--.-- km</div>
+                  <div class="stat-desc">One way</div>
+                </div> -->
+                <!--
+                <div class="stat">
+                  <div class="stat-title text-sm">Total Emission</div>
+                  <div class="stat-value align-middle">
+                    <div class="stat-value text-3xl" id="carbon-to-offset">--.-- tCO<sub>2</sub></div>
+                  </div>
+                  <div class="stat-desc"></div>
+                </div> -->
+
+                <div class="stat">
+                  <div class="stat-title">Cost</div>
+                  <div class="stat-value">
+                    <label id="payment-amount" class="w-auto text-3xl">&emsp;--.--</label>
+                    <select id="list-payment-tokens"
+                      class="select select-primary rounded-none border-l-[0px] border-r-[0px] border-t-[0px] border-b-[1px]">
+                      <option value="MATIC" selected="selected">MATIC</option>
+                      <option value="DAI">DAI</option>
+                      <option value="USDC">USDC</option>
+                      <option value="NCT">NCT</option>
+                      <option value="WMATIC">WMATIC</option>
+                      <option value="WETH">WETH</option>
+                    </select>
+                  </div>
+                  <div class="stat-desc" id="balance">User balance: --.--</div>
+                </div>
+              </div>
+              <div class="relative mb-2">
+                <button class="btn btn-primary w-1/3 float-left" id="btn-approve" style="display:none">Approve</button>
+                <button class="btn btn-primary w-1/3 float-right" id="btn-offset" disabled>Send<button>
+              </div>
+            </div>
+
+            <div class="flex flex-col grid flex-grow justify-between form-control w-80 card
+              place-items-left rounded-box space-y-2">
+              <h2 class="card-title mb-8">Claim POAP</h2>
+              <div class="flex justify-center mb-16">
+                <img src="./images/POAP/20220830_devcon offset POAP proposal.png" alt="POAP to claim"
+                  class="w-3/4 mb-8">
+              </div>
+              <div class="flex justify-center">
+                <p class="text-left w-3/4 mb-8">
+                  To be eligible for the POAP, send at least the equivalent of 0.923 tonnes of carbon to the pool.
+                </p>
+              </div>
+              <div class="relative">
+                <button class="btn btn-primary w-2/3 float-center mb-2" id="btn-claimPoap">Claim POAP</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer bg-transparent p-2 text-neutral-content grid-flow-col lg:fixed bottom-0">
+    <div class="grid-flow-col">
+      <img src="./images/CO2_logo.png" alt="CO2 Logo" style="width:20px;">
+      <p>disCarbon - 2022</p>
+    </div>
+    <div class="justify-self-end">
+      <a href="https://twitter.com/discarbon_earth"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+          viewBox="0 0 24 24" class="fill-current">
+          <path
+            d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z">
+          </path>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="https://cdn.ethers.io/lib/ethers-5.6.umd.min.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/web3modal@1.9.7/dist/index.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/evm-chains@0.2.0/dist/umd/index.min.js"></script>
+  <!-- <script type="text/javascript"
+    src="https://unpkg.com/@walletconnect/web3-provider@1.7.8/dist/umd/index.min.js"></script> -->
+  <script type="text/javascript" src="https://unpkg.com/fortmatic@2.4.0/dist/fortmatic.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  <script src="./resources/jquery.ui.autocomplete.scroll.js"></script>
+  <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.0.js"></script> -->
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Load flight offsetter app -->
+  <script type="module" src="./poolingApp.js"></script>
+</body>
+
 </html>
