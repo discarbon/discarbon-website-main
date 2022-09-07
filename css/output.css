@@ -1484,6 +1484,21 @@ body[dir="rtl"] .checkbox:checked,
   margin-bottom: 1.25rem;
 }
 
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.mx-5 {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
+
 .mb-32 {
   margin-bottom: 8rem;
 }
@@ -1518,6 +1533,18 @@ body[dir="rtl"] .checkbox:checked,
 
 .w-2\/3 {
   width: 66.666667%;
+}
+
+.w-1\/2 {
+  width: 50%;
+}
+
+.w-4\/5 {
+  width: 80%;
+}
+
+.w-3\/4 {
+  width: 75%;
 }
 
 .max-w-\[800px\] {
