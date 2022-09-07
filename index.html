@@ -29,8 +29,7 @@
   <link href="/css/additional.css" rel="stylesheet">
 </head>
 
-<body
-  class="flex flex-col justify-between bg-no-repeat bg-bottom bg-cover bg-RollingHills min-h-screen font-sans">
+<body class="flex flex-col bg-no-repeat bg-bottom bg-cover bg-RollingHills min-h-screen font-sans">
   <div class="navbar bg-base-500">
     <div class="flex-1">
       <!-- <a class="btn btn-ghost text-green-700 normal-case md:text-xl" href="https://www.discarbon.earth">disCarbon</a>
@@ -42,153 +41,119 @@
 
   <div class="container my-5 px-6 mx-auto">
     <section class="mb-32 text-gray-800 text-center ">
-      <h1 class="text-5xl font-bold mb-8">Devcon Offset</h1>
+      <h1 class="text-6xl text-white font-bold mb-8">disCarbon</h1>
       <div class="flex justify-center">
         <div class="max-w-[1200px]">
           <div class="flex flex-col w-full lg:flex-row">
-            <div class="form-control w-80 card rounded-box space-y-2 mb-8 lg:mb-0 lg:mr-8">
-              <h2 class="card-title">Configure Flight and Event</h2>
-              <div class="grid flex-grow rounded-box place-items-left space-y-2">
-                <div>
-                  <!-- <label class="label">
-                    <span class="label-text">From where are you flying to Bogota?</span>
-                  </label> -->
-                  <input name="start" type="text" id="start" placeholder="Departure Airport"
-                    class="input input-bordered input-primary max-w-xs w-full md:h-[60px] md:text-xl">
-                </div>
-                <!-- <div>
-                  <input id="destination" type="text" id="destination" placeholder="To"
-                    class="input input-bordered input-primary max-w-xs w-full md:h-[60px] md:text-xl" />
-                </div> -->
-                <div>
-                  <!-- <label class="label">
-                    <span class="label-text">Which class are you flying?</span>
-                  </label> -->
-                  <div class="flex flex-row w-full rounded-lg bg-transparent mt-1">
-                    <select id="flightclass"
-                      class="select select-bordered select-primary w-full max-w-xs font-normal md:h-[60px] md:text-xl">
-                      <option value="economy">Economy class</option>
-                      <option value="business">Business class</option>
-                      <option value="first">First class</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="stats stats-horizontal">
-                  <div class="stat">
-                    <div class="stat-title">Distance</div>
-                    <div class="stat-value text-xl" id="distance">0 km</div>
-                    <div class="stat-desc">One way</div>
-                  </div>
 
-                  <div class="stat">
-                    <div class="stat-title text-sm">Flight emission</div>
-                    <div class="stat-value align-middle">
-                      <div class="stat-value text-xl" id="flight-emission">0.00 tCO<sub>2</sub></div>
-                    </div>
-                    <div class="stat-desc"></div>
-                  </div>
-                </div>
+            <div class="flex flex-col grid flex-grow justify-between form-control w-800 card
+              place-items-left rounded-box space-y-2 mb-8 lg:mb-0 lg:mr-8">
+              <div class="flex justify-around m-4">
+                <button class="btn btn-primary w-1/5 float-center m-2">flight Offsetter</button>
+                <button class="btn btn-primary w-1/5 float-center m-2">github</button>
+                <button class="btn btn-primary w-1/5 float-center m-2">Blog</button>
+                <button class="btn btn-primary w-1/5 float-end m-2">Gitcoin grant</button>
+              </div>
 
-                <div class="stats stats-horizontal">
-                  <div class="stat">
-                    <div class="stat-title w-full">Devcon 6 Emission per person</div>
-                    <div class="stat-value align-middle w-full">
-                      <div class="stat-value text-2xl" id="event-emission">--.-- tCO<sub>2</sub></div>
-                    </div>
-                    <div class="stat-desc"></div> <!-- show nothing here -->
-                  </div>
-                </div>
-              </div>
-              <div class="mb-2 ">
-                <label class="label">
-                  <span class="label-text">For how many people do you want to offset?</span>
-                </label>
-                <div class="flex flex-row w-full h-12 rounded-xl relative bg-transparent mt-1 md:h-[54px] md:text-xl">
-                  <button data-action="decrement"
-                    class="btn-primary h-full w-20 md:w-24 rounded-l-md cursor-pointer outline-none">
-                    <span class="m-auto text-2xl">−</span>
-                  </button>
-                  <input type="text"
-                    class="input input-bordered input-primary rounded-none text-center w-full text-md flex items-center text-gray-700 h-12 md:h-[54px] md:text-xl"
-                    id="passengers" value="1 participant"></input>
-                  <button data-action="increment" class="btn-primary w-20 md:w-24 rounded-r-lg cursor-pointer">
-                    <span class="m-auto text-2xl">+</span>
-                  </button>
-                </div>
-              </div>
-              <!-- <div class="relative ">
-                  <label class="label cursor-pointer">
-                    <span class="label-text md:text-xl">Round Trip:</span>
-                    <input type="checkbox" id="roundtrip" checked="checked" class="checkbox checkbox-primary md:checkbox-lg" />
-                  </label>
-                </div> -->
-            </div>
 
-            <div
-              class="grid flex-grow form-control w-80 card rounded-box place-items-left space-y-2 mb-8 lg:mb-0 lg:mr-8">
-              <h2 class="card-title">Contribute to Offset Pool</h2>
-              <!-- <div class="flex flex-wrap justify-center">
-                <img src="./images/dummy-statistics.png" alt="detailed carbon emission" class="w-3/4">
-              </div> -->
-              <div class="flex justify-center">
-                <canvas id="EmissionChart" style="width:50%"></canvas>
-              </div>
-              <!-- <canvas id="EmissionChart" style="width:80%;max-width:70px"></canvas> -->
 
-              <div class="stats stats-vertical md:stats-vertical w-full">
-                <!-- <div class="stat">
-                  <div class="stat-title">Distance</div>
-                  <div class="stat-value text-3xl" id="distance">--.-- km</div>
-                  <div class="stat-desc">One way</div>
-                </div> -->
-                <!--
-                <div class="stat">
-                  <div class="stat-title text-sm">Total Emission</div>
-                  <div class="stat-value align-middle">
-                    <div class="stat-value text-3xl" id="carbon-to-offset">--.-- tCO<sub>2</sub></div>
-                  </div>
-                  <div class="stat-desc"></div>
-                </div> -->
+              <h2 class="text-center text-3xl font-bold">Manifesto</h2>
 
-                <div class="stat">
-                  <div class="stat-title">Cost</div>
-                  <div class="stat-value">
-                    <label id="payment-amount" class="w-auto text-3xl">&emsp;--.--</label>
-                    <select id="list-payment-tokens"
-                      class="select select-primary rounded-none border-l-[0px] border-r-[0px] border-t-[0px] border-b-[1px]">
-                      <option value="MATIC" selected="selected">MATIC</option>
-                      <option value="DAI">DAI</option>
-                      <option value="USDC">USDC</option>
-                      <option value="NCT">NCT</option>
-                      <option value="WMATIC">WMATIC</option>
-                      <option value="WETH">WETH</option>
-                    </select>
-                  </div>
-                  <div class="stat-desc" id="balance">User balance: --.--</div>
-                </div>
-              </div>
-              <div class="relative mb-2">
-                <button class="btn btn-primary w-1/3 float-left" id="btn-approve" style="display:none">Approve</button>
-                <button class="btn btn-primary w-1/3 float-right" id="btn-offset" disabled>Send<button>
-              </div>
-            </div>
-
-            <div class="flex flex-col grid flex-grow justify-between form-control w-80 card
-              place-items-left rounded-box space-y-2">
-              <h2 class="card-title mb-8">Claim POAP</h2>
-              <div class="flex justify-center mb-16">
-                <img src="./images/POAP/20220830_devcon offset POAP proposal.png" alt="POAP to claim"
-                  class="w-3/4 mb-8">
-              </div>
-              <div class="flex justify-center">
-                <p class="text-left w-3/4 mb-8">
-                  To be eligible for the POAP, send at least the equivalent of 0.923 tonnes of carbon to the pool.
+              <div class="flex text-left">
+                <p class="text-left">
+                  discarbon.earth creates transparent and verifiable carbon retirement tools available as public goods
+                  within the Ethereum ecosystem.
                 </p>
               </div>
+              <div class="flex text-left">
+                <p class="text-left">
+
+                  discarbon.earth’s aims are:
+                </p>
+              </div><div  class="flex text-left">
+                <p>
+                <ul  class="list-disc">
+                  <li> To raise awareness about the impact our actions have on our planet.</li>
+                  <li> To accelerate the adoption of on-chain carbon credits.</li>
+                  <li> To drive the irrevocable retirement of carbon credits.</li>
+                </ul>
+                </p>
+              </div>
+
+              <div class="flex text-left">
+                <p class="text-left"></p>
+                We believe that drastic action is required to avert the disastrous consequences of climate change and
+                that web3 offers the tools and hope to coordinate and enable this action.
+                </p>
+              </div>
+              <div class="flex text-left">
+                <p class="text-left"></p>
+                In order to achieve these goals, discarbon.earth’s initial focus is carbon footprint tools that show
+                people how they can reduce their impact on the planet and minimize their contribution to climate change.
+                Moreover, our tools allow people to offset the emissions due to their actions using tokenized carbon
+                credits directly on-chain. These tools demonstrate how easy it is to use and retire on-chain carbon
+                credits in order to drive the adoption of tokenized carbon among crypto-natives and provide a showcase
+                for a legitimate and tangible use case of blockchain for those less familiar with the technology, both
+                within the traditional carbon credit industry, and beyond.
+                </p>
+              </div>
+              <h2 class="text-center text-3xl font-bold">Why on-chain credits</h2>
+              <div class="flex text-left">
+                <p class="text-left mb-8"></p>
+                Why does discarbon.earth use on-chain carbon credits? We believe that the traditional voluntary carbon
+                market has its place in pricing the negative impact our actions have on the planet and results in
+                worthwhile projects that do positive work and help preserve the health of our planet. Currently,
+                however, a lot of value in the existing market is extracted by middlemen and not the underlying carbon
+                offset projects that actually do climate-positive work. Our hope is that the on-chain market will make
+                the existing system fairer and more accessible. To this end, we want to create tools that increase the
+                adoption of the on-chain carbon market with the ultimate goal of driving more value to climate-positive
+                projects. This in turn will enable more carbon offset projects to come to life.
+                </p>
+              </div>
+              <h2 class="text-center text-3xl font-bold">Our achievements and future path</h2>
+              <div class="flex text-left">
+                <p class="text-left mb-8"></p>
+                Founded in May 2022, our first tool is a flight emission offsetter (https://flight.discarbon.earth/)
+                which allows anyone to compensate their air travel induced carbon emission within seconds
+                (https://twitter.com/discarbon_earth/status/1549535812114677765). Only the start and destination airport
+                must be provided in order to calculate the distance and typical carbon emission. The flight offsetter is
+                a pure decentralized application with no backend communication: The emission calculation runs directly
+                in the browser and the retirement occurs on-chain. The carbon emission calculation has been benchmarked
+                against the best in the industry (https://hackmd.io/@haurog/BJ0dT-g35) and shown to be simple, reliable
+                and accurate.
+                </p>
+              </div>
+              <div class="flex text-left">
+                <p class="text-left mb-8"></p>
+                The flight emission offsetter will be extended with smart contract based accounting and POAP issuance
+                (https://poap.xyz/) in order to incentivize users to offset their carbon emissions. In a last step, we
+                will additionally allow the user to transparently choose which carbon reduction project to source the
+                carbon credits from.
+                </p>
+              </div>
+              <div class="flex text-left">
+                <p class="text-left mb-8"></p>
+                In parallel, we are working on a community-led initiative to make Devcon VI carbon neutral
+                (https://forum.devcon.org/t/lets-make-devcon6-carbon-neutral-a-step-towards-implementing-dip-1-dip-12/400).
+                Devcon is the largest Ethereum conference and takes place this year in Bogotá, Colombia. discarbon.earth
+                will provide public goods that will estimate the event’s carbon footprint, enable attendees to
+                voluntarily contribute to a carbon offset pool and vote on the choice of underlying carbon reduction
+                project. This project will raise awareness of on-chain carbon credits amongt the entire Ethereum
+                community.
+                </p>
+              </div>
+              <div class="flex text-left">
+                <p class="text-left mb-8"></p>
+                Standard emission offset tools are just the beginning, however, and we look forward to exploring other
+                amazing opportunities that programmable carbon enables.
+                </p>
+              </div>
+
               <div class="relative">
                 <button class="btn btn-primary w-2/3 float-center mb-2" id="btn-claimPoap">Claim POAP</button>
               </div>
             </div>
+
           </div>
         </div>
       </div>
